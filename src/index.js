@@ -1,17 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import Header from './Header/Header'
+import headerData from './Header/headerData'
+import Card from './Card/Card'
+import cardData from './Card/cardData'
+
+
+const AviationExplorer = () => (
+    <div>
+        <Header header={headerData}/>
+        <Card cards={cardData}/>
+    </div>
+)
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    <AviationExplorer />,
+    document.querySelector('#root')
+)
